@@ -1,0 +1,29 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Temporary Inspection Scripts
+check_python.py
+check_categories.py
+check_num_stats.py
+check_rest_categories.py
+inspect_model.py
+parse_notebook.py
+print_critical_cells.py
+test_joblib.py
+view_10_15.py
+view_12.py
+
+# System
+.DS_Store
+Thumbs.db

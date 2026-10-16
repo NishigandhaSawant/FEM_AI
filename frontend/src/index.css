@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fem-bg: #FFF8F5;
+  --fem-cream: #FFF1E6;
+  --fem-pink: #E9A8B8;
+  --fem-pink-hover: #DE93A5;
+  --fem-pink-light: #F8DDE4;
+  --fem-pink-soft: #FCF1F4;
+  --fem-text: #493941;
+  --fem-text-muted: #7A6871;
+  --shadow-dark: rgba(214, 185, 192, 0.38);
+  --shadow-light: rgba(255, 255, 255, 0.95);
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--fem-bg);
+  color: var(--fem-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neuromorphic Surface Utility Classes */
+.neu-card {
+  background: #FFF9F7;
+  border-radius: 1.5rem;
+  box-shadow: 8px 8px 20px var(--shadow-dark), -8px -8px 20px var(--shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neu-card-sm {
+  background: #FFF9F7;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 12px var(--shadow-dark), -4px -4px 12px var(--shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.neu-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 10px 10px 24px var(--shadow-dark), -10px -10px 24px var(--shadow-light);
+}
+
+.neu-inset {
+  background: #FFF5F2;
+  border-radius: 1rem;
+  box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+  border: 1px solid rgba(233, 168, 184, 0.2);
+}
+
+.neu-btn-primary {
+  background: linear-gradient(135deg, #E9A8B8 0%, #E395A7 100%);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  box-shadow: 5px 5px 14px var(--shadow-dark), -5px -5px 14px var(--shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neu-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #DE93A5 0%, #D88397 100%);
+  transform: translateY(-1px);
+  box-shadow: 6px 6px 18px var(--shadow-dark), -6px -6px 18px var(--shadow-light);
+}
+
+.neu-btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: inset 3px 3px 6px rgba(180, 130, 142, 0.5), inset -3px -3px 6px rgba(255, 255, 255, 0.6);
+}
+
+.neu-btn-secondary {
+  background: #FFF4EE;
+  color: #493941;
+  border-radius: 9999px;
+  box-shadow: 5px 5px 12px var(--shadow-dark), -5px -5px 12px var(--shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neu-btn-secondary:hover:not(:disabled) {
+  background: #FFF8F5;
+  transform: translateY(-1px);
+  box-shadow: 6px 6px 16px var(--shadow-dark), -6px -6px 16px var(--shadow-light);
+}
+
+.neu-btn-secondary:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+}
+
+.neu-btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Custom form range slider */
+input[type=range] {
+  accent-color: #E9A8B8;
+}
+
+/* Custom soft scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #F8DDE4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E9A8B8;
+}
